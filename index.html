@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home|NikDevelopment</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="White Black Modern Initial Logo.png">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+          <li onclick="hideSidebar()"><a href="#"><img width="45" height="40" src="https://img.icons8.com/ios-filled/50/FFFFFF/x.png" alt="x"/></a></li>
+          <li><a href="index.html" onclick="hideSidebar()">Home</a></li>
+          <li><a href="#" onclick="hideSidebar(); scrollToSection('prijzen')">Portfolio</a></li>
+          <li><a href="#pricelist" onclick="hideSidebar(); scrollToSection('pricelist')">Price List</a></li>
+          <li><a href="#contact" onclick="hideSidebar(); scrollToSection('contact')">Contact</a></li>
+        </ul>
+        <ul>
+          <li><a href="#"><img class="kleine-logo" src="White Black Modern Initial Logo.png" alt="Logo"></a></li>
+          <li class="hideOnMobile"><a href="index.html">Home</a></li>
+          <li class="hideOnMobile"><a href="#" onclick="scrollToSection('prijzen')">Portfolio</a></li>
+          <li class="hideOnMobile"><a href="#pricelist" onclick="scrollToSection('pricelist')">Price List</a></li>
+          <li class="hideOnMobile"><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+          <li class="menu-button" onclick="showSidebar()"><a href="#"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/menu--v6.png" alt="menu--v6"/></a></li>
+        </ul>
+      </nav>
+
+      <div class="blok1">
+        <br>
+        <h1 style="color:rgb(180, 1, 1); background-color: rgb(255, 255, 255); text-align: center;">Website</h1>
+        <h3 style="text-align: center;background-color: rgb(255, 255, 255); color: black;">Get found online.</h3>
+        <h3 style="text-align: center;background-color: rgb(255, 255, 255); color:black;">Digital solutions for real problems.</h3>
+        <img style="width: 100%; border-bottom: 8px solid white;" src="Schermafbeeldingfffff.png" alt="photo-blok1" >
+  
+      </div>
+    
+      <div class="blok2">
+        <br>
+        <br>
+        <h1 style="text-align: center; color: rgb(180, 1, 1); background-color: white;">Webshop</h1>
+        <h3 style="text-align: center; color: black; background-color: white;">Ready to sell online?</h3>
+        <h3 style="text-align: center; color: black; background-color: white;">Your store your rules!</h3>
+    
+        <img style=" width: 100%; border-bottom: 8px solid white;" src="Schermafbeelding gggg.png" alt="photo-webshop">
+      </div>
+  
+      <div class="blok3">
+        <div class="container-services">
+          <div class="services">
+
+          </div>
+          <div class="services">
+
+          </div>
+          <div class="services">
+
+          </div>
+        </div>
+      </div>
+<br>
+      <div id="pricelist"class="#pricelist">
+        <div style="text-align: center;">
+          <a href="paginaportfolio.html"  class="btn">Portfolio</a>
+        </div>
+      </div>
+
+      <div id="contact" class="#contact" style="background-color: whitee;">
+        <br>
+       <h2 style="text-align: center;">Contact</h2>
+       <br>
+      <p style="text-align: center;"><a href="mailto:nikdevstudios@outlook.com">->Send an email<-</a></p>
+      <p><a></a></p>
+       <br>
+      </div>
+
+      <script>
+        function showSidebar() {
+     const sidebar = document.querySelector('.sidebar');
+     sidebar.style.display = 'flex';
+   }
+ 
+   function hideSidebar() {
+     const sidebar = document.querySelector('.sidebar');
+     sidebar.style.display = 'none';
+   }
+ 
+   function scrollToSection(sectionId) {
+     const section = document.getElementById(sectionId);
+     section.scrollIntoView({ behavior: 'smooth' });
+   }
+ 
+   window.addEventListener('DOMContentLoaded', function() {
+   var video = document.getElementById('myVideo');
+   var videoVisible = false;
+ 
+   function checkVideoVisibility() {
+     var videoTop = video.getBoundingClientRect().top;
+     var videoBottom = video.getBoundingClientRect().bottom;
+     var windowBottom = window.innerHeight;
+ 
+     if (videoTop < windowBottom && videoBottom > 0 && !videoVisible) {
+       video.play();
+       videoVisible = true;
+     } else if ((videoTop > windowBottom || videoBottom < 0) && videoVisible) {
+       video.pause();
+       videoVisible = false;
+     }
+   }
+ 
+   window.addEventListener('scroll', checkVideoVisibility);
+   checkVideoVisibility(); // Check video visibility on page load
+ });
+   </script>
+</body>
+<footer></footer>
+</html>
